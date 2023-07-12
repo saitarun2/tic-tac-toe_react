@@ -4,10 +4,6 @@ import './App.css'
 function Square({ value, onClick ,boxval}) {
     return <button onClick={onClick}>{value}</button>;
 }
-  
-
-
-
 
 
 function App() {
@@ -37,12 +33,15 @@ function App() {
   Nextp ? nextplayer = 'X' : nextplayer = 'O';
   let winner = calcluateWinner(boxval);
 
+
+
   return (
     <div className="board">
       <h1>Tic-Tac-Toe</h1>
       <h5>
         {calcluateWinner(boxval)
-          ? `Winner is ${winner}`
+          ? `Winner is ${winner}
+           and click on any box to restart the game`
           : `Next player :${nextplayer}`}
       </h5>
       <div className="row">
